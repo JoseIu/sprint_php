@@ -8,22 +8,17 @@ $cache = __DIR__ . '/cache';
 $blade = new BladeOne($views, $cache, BladeOne::MODE_DEBUG);
 function conectDB()
 {
-    $host = 'localhost';
+    $host = '127.0.0.1';
     $username = 'root';
     $password = 'root';
-    $database = 'ejemplo_db';
-    $port = 3306;
+    $database = 'hotel_miranda';
 
     try {
-        $mysqli = new mysqli($host, $username, $password, $database, $port);
+        $mysqli = new mysqli($host, $username, $password, $database);
 
-        // Verificar conexión
-        if ($mysqli->connect_error) {
-            echo "Error en la conexión: " . $mysqli->connect_error;
-        } else {
-            echo "Conexión exitosa";
-        }
+        echo "Conection successfull 🚀";
+        return $mysqli;
     } catch (mysqli_sql_exception $e) {
-        echo "Error en la conexión: " . $e->getMessage();
+        echo "Erro in the contection 😥: " . $e->getMessage();
     }
 }
