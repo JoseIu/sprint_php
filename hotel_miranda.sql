@@ -40,19 +40,52 @@ CREATE TABLE `room_amenities` (
 INSERT INTO `room` (`room_number`,`room_type`,`description`,`offer`,`offer_price`,`price`,`status`)
  VALUES 
 (1, 'Suite','Tyrannus cursim dedico admoneo casso blandior centum amitto creptio versus.',TRUE,20,500,TRUE), 
-(2, 'Single Bed','Tyrannus cursim dedico admoneo casso blandior centum amitto creptio versus.',FALSE,0,200,TRUE);
+(2, 'Double Bed','Tyrannus cursim dedico admoneo casso blandior centum amitto creptio versus.',FALSE,0,200,TRUE),
+(3, 'Double Superior','Tyrannus cursim dedico admoneo casso blandior centum amitto creptio versus.',TRUE,20,700,TRUE), 
+(4, 'Single Bed','Tyrannus cursim dedico admoneo casso blandior centum amitto creptio versus.',FALSE,0,200,TRUE),
+(5, 'Suite','Tyrannus cursim dedico admoneo casso blandior centum amitto creptio versus.',FALSE,0,200,TRUE), 
+(6, 'Single Bed','Tyrannus cursim dedico admoneo casso blandior centum amitto creptio versus.',FALSE,0,200,FALSE),
+(7, 'Suite','Tyrannus cursim dedico admoneo casso blandior centum amitto creptio versus.',TRUE,20,400,TRUE), 
+(8, 'Double Bed','Tyrannus cursim dedico admoneo casso blandior centum amitto creptio versus.',FALSE,0,200,TRUE),
+(9, 'Suite','Tyrannus cursim dedico admoneo casso blandior centum amitto creptio versus.',TRUE,20,800,TRUE), 
+(10, 'Double Superior','Tyrannus cursim dedico admoneo casso blandior centum amitto creptio versus.',FALSE,0,200,FALSE);
 
 INSERT INTO `room_images` (`room_id`,`image`) 
 VALUES
-(1,'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/183.jpg') ,
-(1,'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/43.jpg'),
-(2,'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/183.jpg') ,
-(2,'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/43.jpg');
+(1, 'https://images.unsplash.com/photo-1570129477492-45c003edd2be'),
+(1, 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2'),
+(2, 'https://images.unsplash.com/photo-1570129477492-45c003edd2be'),
+(2, 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267'),
+(3, 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688'),
+(3, 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb'),
+(4, 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688'),
+(4, 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb'),
+(5, 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750'),
+(5, 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2'),
+(6, 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2'),
+(6, 'https://images.unsplash.com/photo-1560518883-ce09059eeffa'),
+(7, 'https://images.unsplash.com/photo-1560518883-ce09059eeffa'),
+(7, 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750'),
+(8, 'https://images.unsplash.com/photo-1560518883-ce09059eeffa'),
+(8, 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2'),
+(9, 'https://images.unsplash.com/photo-1570129477492-45c003edd2be'),
+(9, 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750'),
+(10, 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb'),
+(10, 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb');
 
 INSERT INTO `room_amenities` (`room_id`, `amenity_id`) 
 VALUES 
 (1,1),(1,2),(1,3),(1,4),
-(2,1),(2,2),(2,3),(2,5);
+(2,1),(2,2),(2,3),(2,5),
+(3,1),(3,2),(3,3),(3,5), 
+(4,1),(4,2),(4,3),(4,5),
+(5,1),(5,2),(5,3),(5,5),
+(6,1),(6,2),(6,3),(6,5),
+(7,1),(7,2),(7,3),(7,5),
+(8,1),(8,2),(8,3),(8,5),
+(9,1),(9,2),(9,3),(9,5),
+(10,1),(10,2),(10,3),(10,5);
+
 
 
 
