@@ -1,24 +1,25 @@
 <?php
 require_once('./setup.php');
-echo $blade->run("room", ["name" => "Joselu"]);
+require_once('./querys/room.querys.php');
 $db = conectDB();
-$query = "SELECT 
-r._id, 
-ri.image AS images,
-r.room_number,
-r.room_type,
-r.description,
-r.offer,
-r.offer_price,
-r.status,
-a.name 
-FROM
-room r
-JOIN
-room_images ri ON r._id=ri.room_id
-JOIN room_amenities ra ON r._id=ra.room_id
-JOIN amenities a ON a.id = ra.amenity_id;
-";
+
+$result = mysqli_query($db, $queries['query_allrooms']);
+
+$rooms = array();
 
 
-$result = mysqli_query($db, $query);
+while ($row = $result->fetch_assoc()) {
+    if (!isset($rooms[$row['_id']])) {
+        $rooms[$row['_id']] = $row;
+        $rooms[$row['_id']]['amenities'] = array($row['amenities']);
+    } else {
+        if (!in_array($row['amenities'], $rooms[$row['_id']]['amenities'])) {
+            $rooms[$row['_id']]['amenities'][] = $row['amenities'];
+        }
+    }
+}
+
+echo $blade->run("room", ['rooms' => $rooms]);
+// echo '<pre>';
+// print_r($rooms);
+// echo '</pre>';
