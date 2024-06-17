@@ -16,7 +16,6 @@ function conectDB()
     try {
         $mysqli = new mysqli($host, $username, $password, $database);
 
-        echo "Conection successfull 🚀";
         return $mysqli;
     } catch (mysqli_sql_exception $e) {
         echo "Erro in the contection 😥: " . $e->getMessage();
