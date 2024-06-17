@@ -72,8 +72,50 @@
   <div class="swiper">
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
+      @foreach ($rooms as $room)
+      <div class="swiper-slide">
+        <article class="slider__item">
+          <img class="slider__item-img" src="{{ $room['images'] }}" loading="lazy" alt="about image" />
+
+          <div class="slider__item-content">
+            <ul class="slider__item-list">
+              <li class="slider__item-li">
+                <img src="./assets/images/rooms/bed.svg" alt="bed icon" />
+              </li>
+              <li class="slider__item-li">
+                <img src="./assets/images/rooms/wifi.svg" alt="free-wifi icon" />
+              </li>
+              <li class="slider__item-li">
+                <img src="./assets/images/rooms/car.svg" alt="parking-free icon" />
+              </li>
+              <li class="slider__item-li">
+                <img src="./assets/images/rooms/snow.svg" alt="snow icon" />
+              </li>
+              <li class="slider__item-li">
+                <img src="./assets/images/rooms/dumbbells.svg" alt="gym icon" />
+              </li>
+              <li class="slider__item-li">
+                <img src="./assets/images/rooms/cigar.svg" alt="no smoking icon" />
+              </li>
+              <li class="slider__item-li">
+                <img src="./assets/images/rooms/cup.svg" alt="cup icon" />
+              </li>
+            </ul>
+            <div class="slider__item-description">
+              <div>
+                <h3 class="slider__item-title">{{ $room['room_type'] }} </h3>
+                <p class="slider__item-text">
+                  {{ $room['description'] }}
+                </p>
+              </div>
+              <span class="slider__item-price">${{ $room['price'] }}/Night</span>
+            </div>
+          </div>
+        </article>
+      </div>
+      @endforeach
       <!-- Slides -->
-      <div class="swiper-slide">
+      <!-- <div class="swiper-slide">
         <article class="slider__item">
           <img class="slider__item-img" src="./assets/images/about.webp" loading="lazy" alt="about image" />
 
@@ -277,7 +319,7 @@
             </div>
           </div>
         </article>
-      </div>
+      </div> -->
     </div>
 
     <!-- If we need navigation buttons -->
@@ -457,7 +499,7 @@
     </div>
   </div>
 
-  <!-- TOODO: SLIDER -->
+  <!-- TOODO: SLIDER? -->
   <div class="foods__images wrapper2">
     <div class="foods__slider">
       <ul class="foods__images-list">
