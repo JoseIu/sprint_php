@@ -15,7 +15,7 @@ DROP TABLE IF EXISTS `room_images`;
 CREATE TABLE `room_images`(
 	`id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	`room_id` INT NOT NULL,
-    `image` TEXT NOT NULL,
+  `image` TEXT NOT NULL,
     
     FOREIGN KEY (room_id) REFERENCES room(_id) ON DELETE CASCADE
 );
