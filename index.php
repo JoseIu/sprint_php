@@ -22,7 +22,6 @@ while ($row = $result->fetch_assoc()) {
 }
 function getBookins()
 {
-    $bookings = array();
     global $db;
     $booking_querry = "SELECT * FROM bookings";
     $result = mysqli_query($db, $booking_querry);
@@ -61,14 +60,13 @@ function isOccupied($startDate, $endDate)
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $inital_date = $_POST['arrival'] ?? '';
-    $end_date = $_POST['departure'] ?? '';
-
-    $isOcupiedd = isOccupied($inital_date, $end_date);
-    if ($isOcupiedd) {
-        echo "La habitacion esta disponible";
-    } else {
-        echo "La habitacion no esta disponible";
+    $inital_date = $_POST['arrival'];
+    $end_date = $_POST['departure'];
+    if (!empty($inital_date) || !empty($end_date)) {
+        $isOcupiedd = isOccupied($inital_date, $end_date);
+        if ($isOcupiedd) {
+            header('Location: room.php');
+        }
     }
 }
 echo $blade->run("index", ["rooms" => $rooms]);
