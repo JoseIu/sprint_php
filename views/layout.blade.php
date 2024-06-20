@@ -19,19 +19,21 @@
   <header class="header">
     <div class="header__container wrapper">
       <div class="header__content">
-        <button class="header__toggle" aria-label="toggle open menu">
-          <img src="./assets/images/menu.svg" alt="image to open menu" />
-        </button>
+        <div class="header__actions">
+          <button class="header__toggle" aria-label="toggle open menu">
+            <img src="./assets/images/menu.svg" alt="icon menu" />
+          </button>
+          <button class="header__close header__toggle--hidden" aria-label="button close menu">
+            <img src="./assets/images/cross.svg" alt="close menu" />
+          </button>
+        </div>
         <a class="header__logo" href="./index.php" aria-label="retur to home">
-          <img class="header__image" src="../assets/images/logo.svg" alt="hotel miranda logo" />
+          <img class="header__image" src="./assets/images/logo.svg" alt="hotel miranda logo" />
 
           <h1 class="header__title">Hotel <span>Miranda</span></h1>
         </a>
 
         <nav class="header__nav">
-          <button class="header__close" aria-label="button close menu">
-            <img src="./assets/images/cross.svg" alt="close menu" />
-          </button>
           <ul class="header__nav-list">
             <li class="header__nav-item">
               <a class="header__nav-link" href="./about_us.php" aria-label="go to About-us">About Us
@@ -45,7 +47,8 @@
               </a>
             </li>
             <li class="header__nav-item">
-              <a class="header__nav-link" href="#" aria-label="go to Contact">Contact </a>
+              <a class="header__nav-link" href="./contact.php" aria-label="go to Contact">Contact
+              </a>
             </li>
           </ul>
         </nav>
