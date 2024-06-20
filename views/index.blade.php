@@ -15,12 +15,13 @@
   </div>
 </section>
 <section class="date">
-  <form class="date__form wrapper">
+  <form class="date__form wrapper" action="./index.php" method="POST">
     <div class="date__form-inputs">
       <input class="date__form-input" type="date" name="arrival" id="arrival" />
-      <input class="date__form-input" type="date" name="depurate" id="depurate" />
+      <input class="date__form-input" type="date" name="departure" id="departure" />
     </div>
     <button class="date__form-submit" type="submit">Check availability</button>
+    <span></span>
   </form>
 </section>
 
@@ -350,7 +351,7 @@
   </div>
 </section>
 
-<section class="features">
+<section class="features wrapper2">
   <h2 class="features__subtitle title">Facilities</h2>
   <h3 class="features__title old">Core Features</h3>
 
