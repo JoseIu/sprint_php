@@ -1,2 +1,0 @@
-RewriteEngine On
-RewriteRule ^roomdetails\.php$ room_details.php [QSA,L]
