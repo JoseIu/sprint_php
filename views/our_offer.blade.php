@@ -4,7 +4,7 @@
 
 @section('content')
 <section class="home-component">
-  <div class="home-component__content rooms-list">
+  <div class="home-component__content offert-hero">
     <div class="wrapper">
       <div class="room-home">
         <h2 class="home-component__subtitle title">The Ultimate Luxury</h2>
@@ -17,7 +17,7 @@
 <section class="offers wrapper2">
   <article class="offer">
     <div class="offer__image">
-      <img class="offer__img" src="./assets/images/room/room.webp" alt="" />
+      <img class="offer__img" src="./assets/images/room/big/room-big2.webp " alt="room 2" />
       <div class="offer__prices">
         <span class="offer__price offer__price--original">$500/night</span>
         <span class="offer__price offer__price--offer">$345/night</span>
@@ -89,7 +89,7 @@
   </article>
   <article class="offer">
     <div class="offer__image">
-      <img class="offer__img" src="./assets/images/room/room.webp" alt="" />
+      <img class="offer__img" src="./assets/images/room/big/room-big3.webp " alt="room 3" />
       <div class="offer__prices">
         <span class="offer__price offer__price--original">$500/night</span>
         <span class="offer__price offer__price--offer">$345/night</span>
@@ -161,7 +161,7 @@
   </article>
   <article class="offer">
     <div class="offer__image">
-      <img class="offer__img" src="./assets/images/room/room.webp" alt="" />
+      <img class="offer__img" src="./assets/images/room/big/room-big4.webp" alt="room 4" />
       <div class="offer__prices">
         <span class="offer__price offer__price--original">$500/night</span>
         <span class="offer__price offer__price--offer">$345/night</span>
@@ -233,7 +233,7 @@
   </article>
   <article class="offer">
     <div class="offer__image">
-      <img class="offer__img" src="./assets/images/room/room.webp" alt="" />
+      <img class="offer__img" src="./assets/images/room/big/room-big5.webp" alt="room 4" />
       <div class="offer__prices">
         <span class="offer__price offer__price--original">$500/night</span>
         <span class="offer__price offer__price--offer">$345/night</span>
@@ -305,8 +305,8 @@
   </article>
   <article class="offer">
     <div class="offer__image">
-      <img class="offer__img" src="./assets/images/room/room.webp" alt="" />
-      <div class="offer__prices">
+      <img class="offer__img" src="./assets/images/room/big/room-big1.webp" alt="room 1" />
+      <div class="offer__prices offer__prices--mobile">
         <span class="offer__price offer__price--original">$500/night</span>
         <span class="offer__price offer__price--offer">$345/night</span>
       </div>
